@@ -6,7 +6,7 @@
 #    By: rcorke <rcorke@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/04/09 18:10:06 by rcorke         #+#    #+#                 #
-#    Updated: 2019/05/03 20:31:47 by rcorke        ########   odam.nl          #
+#    Updated: 2019/10/03 15:00:25 by rcorke        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ $(NAME):
 clean:
 	@make clean -C libft/
 	@rm -rf *~ $(OBJECTS)
+	@rm -rf a.out
+	@rm -rf .DS_Store
 
 fclean: clean
 	@make fclean -C libft/

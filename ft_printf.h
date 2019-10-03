@@ -6,7 +6,7 @@
 /*   By: rcorke <rcorke@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/03/03 13:33:50 by kpereira       #+#    #+#                */
-/*   Updated: 2019/05/03 20:36:06 by rcorke        ########   odam.nl         */
+/*   Updated: 2019/07/08 12:09:24 by rcorke        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <stdio.h> // selihjzlshfdhgzdrhfflkzsuhlkuzhseflkfuhzselkfuhzselkfuhzkeufhzlkseufhzksuhfzklsueefhlzkssuhef (remove)
-# include "libft/libft.h"
+# include "./libft/libft.h"
 
 /*
 **				   16    8 4 2 1

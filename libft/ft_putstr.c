@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: rcorke <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/17 13:45:43 by rcorke         #+#    #+#                */
-/*   Updated: 2019/04/26 16:40:46 by rcorke        ########   odam.nl         */
+/*   Created: 2019/01/17 13:45:43 by rcorke        #+#    #+#                 */
+/*   Updated: 2019/01/24 17:44:09 by rcorke        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_putstr(const char *s)
 	if (s)
 	{
 		while (s[x] != '\0')
-			x++;
-		write(1, &s[0], x);
+			ft_putchar(s[x++]);
 	}
 }

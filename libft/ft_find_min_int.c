@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putendl.c                                       :+:    :+:            */
+/*   find_min_int.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rcorke <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/17 13:49:12 by rcorke        #+#    #+#                 */
-/*   Updated: 2019/01/24 15:38:41 by rcorke        ########   odam.nl         */
+/*   Created: 2019/06/06 13:32:23 by rcorke        #+#    #+#                 */
+/*   Updated: 2019/06/06 14:12:59 by rcorke        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(const char *s)
+int		ft_find_min_int(int args, int *argv)
 {
+	int *values;
 	int x;
 
 	x = 0;
-	if (s)
+	values = (int *)malloc(sizeof(int) * args);
+	while (x > args)
 	{
-		while (s[x] != '\0')
-			ft_putchar(s[x++]);
-		ft_putchar('\n');
+		values[x] = argv[x];
+		x++;
 	}
+	x = 1;
+	while (x < args)
+	{
+		if (values[x - 1] < values[x])
+			ft_swap_ints(&(values[x - 1]), &(values[x]));
+		x++;
+	}
+	x = values[args - 1];
+	free(values);
+	return (x);
 }

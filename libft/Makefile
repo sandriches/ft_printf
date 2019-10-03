@@ -3,14 +3,17 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: rcorke <rcorke@student.codam.nl>             +#+                      #
+#    By: rcorke <marvin@codam.nl>                     +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/01/19 18:09:35 by rcorke         #+#    #+#                 #
-#    Updated: 2019/04/25 01:08:18 by rcorke        ########   odam.nl          #
+#    Updated: 2019/10/03 14:56:05 by rcorke        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+MAKEFLAGS += --silent
+
 SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
 ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c \
@@ -23,23 +26,28 @@ ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 ft_isprime.c ft_pow.c ft_skipchars.c ft_rplchars.c ft_strrev.c ft_strcharloc.c \
 ft_strlow.c ft_strnjoin.c ft_strndup.c ft_lstlen.c ft_lstaddend.c ft_strcap.c \
-get_next_line.c ft_long_itoa.c ft_long_long_itoa.c ft_unsigned_long.c
+get_next_line.c ft_find_min_int.c ft_swap_ints.c ft_fits_in_int.c \
+ft_long_long_itoa.c ft_long_itoa.c ft_unsigned_long_itoa.c
+
 OBJECTS = $(SRCS:.c=.o)
+
 FLAGS = -Wall -Wextra -Werror
+
 LIBMAKER = ar rc
 
 all: $(NAME)
 
 $(NAME):
-	@echo making libft...
-	@gcc $(FLAGS) -c -I./ $(SRCS)
-	@$(LIBMAKER) $(NAME) $(OBJECTS)
-	@ranlib $(NAME)
+	gcc $(FLAGS) -c -I./ $(SRCS)
+	$(LIBMAKER) $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
-	@rm -rf $(OBJECTS) *~
+	rm -rf $(OBJECTS) *~
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: rcorke <rcorke@student.codam.nl>             +#+                     */
+/*   By: rcorke <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/01/10 17:22:12 by rcorke         #+#    #+#                */
-/*   Updated: 2019/04/15 13:48:23 by rcorke        ########   odam.nl         */
+/*   Updated: 2019/10/03 14:56:34 by rcorke        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <fcntl.h>
+# include <stdarg.h>
+# include <limits.h>
 
 typedef struct		s_list
 {
@@ -73,8 +75,8 @@ int					ft_strcharloc(char *str);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_long_itoa(long n);
-char				*ft_long_long_itoa(long long int n);
-char				*ft_unsigned_long_itoa(unsigned long int n);
+char				*ft_long_long_itoa(long long n);
+char				*ft_unsigned_long_itoa(unsigned long n);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -110,5 +112,9 @@ void				ft_lstaddend(t_list *lst, t_list *new);
 void				ft_lstpopend(t_list *lst);
 
 int					get_next_line(const int fd, char **line);
+
+int					ft_find_min_int(int args, int *argv);
+int					ft_fits_in_int(char *str);
+void				ft_swap_ints(int *a, int *b);
 
 #endif
