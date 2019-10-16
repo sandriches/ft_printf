@@ -6,17 +6,17 @@ FT_PRINTF asks the student to recode the printf() function in C. This gives stud
 
 TYPES:
 
-All with the following flags: hh, h, l, ll:
+All with the following type-specific flags: hh, h, l, ll:
 - %d/i% - integer
 - %o - octal
 - %u - unsigned int
 - %x/%X - hex
 
 
-With flags: l, L:
+With type-specific flags: l, L:
 - %f - float
 
-Without flags:
+Without type-specific flags:
 - %c			char
 - %s			string
 - %p			pointer
@@ -24,7 +24,7 @@ Without flags:
 - %%			(Edge case)
 
 ---
-FLAGS:
+GENERAL FLAGS:
 - '#'  -   	  Used with o, x or X - value is preceeded with 0, 0x or 0X respectively for values different than zero.
             Used with f - forces the written output to contain a decimal point even if no more digits follow. By default, if             no digits follow, no decimal point is written.
 - '0'  -       Left-pads the number with zeroes (0) instead of spaces when padding is specified (see width sub-specifier).
