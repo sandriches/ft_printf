@@ -12,17 +12,18 @@ All with the following flags: hh, h, l, ll:
 - %u - unsigned int
 - %x/%X - hex
 
----
+
 With flags: l, L:
 - %f - float
 
----
+
 - %c			char
 - %s			string
 - %p			pointer
 
 - %%			(Edge case)
 
+---
 FLAGS:
 - '#'  -   	  Used with o, x or X - value is preceeded with 0, 0x or 0X respectively for values different than zero.
             Used with f - forces the written output to contain a decimal point even if no more digits follow. By default, if             no digits follow, no decimal point is written.
@@ -33,6 +34,7 @@ FLAGS:
 
 Minimum field width (numbers before a specifier type) as well as precision are also included.
 
+---
 As a bonus:
 - '*' - Wildcard (allows for another value to be used as precision/width)
 - %b  - Binary
