@@ -19,20 +19,21 @@ TYPES:
 %%			(Edge case)
 
 FLAGS:
-#
-0
--
-+
-' ' (space)	
+'#'     	  Used with o, x or X - value is preceeded with 0, 0x or 0X respectively for values different than zero.
+            Used with f - forces the written output to contain a decimal point even if no more digits follow. By default, if             no digits follow, no decimal point is written.
+'0'         Left-pads the number with zeroes (0) instead of spaces when padding is specified (see width sub-specifier).
+'-'         Left justify
+'+'         Forces to preceed the result with a plus or minus sign (+ or -) even for positive numbers. By default, only                 negative numbers are preceded with a - sign.
+' ' (space)	If no sign is going to be written, a blank space is inserted before the value.
 
 Minimum field width (numbers before a specifier type) as well as precision are also included.
 
 As a bonus:
-*			Wildcard (allows for another value to be used as precision/width)
+*		  	Wildcard (allows for another value to be used as precision/width)
 %b			Binary
 %jd			intmax_t
 %zd			size_t
-Colors (see header file for how to implement)
+Colors  (see header file for how to implement)
 Buffer Management (a buffer string is filled and doesn't print until EITHER it is full with a variable size (BUF_SIZE in header file) OR the format string is finished.
 
 
