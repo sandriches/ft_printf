@@ -16,7 +16,7 @@ All with the following flags: hh, h, l, ll:
 With flags: l, L:
 - %f - float
 
-
+Without flags:
 - %c			char
 - %s			string
 - %p			pointer
