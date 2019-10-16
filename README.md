@@ -6,12 +6,11 @@ FT_PRINTF asks the student to recode the printf() function in C. This gives stud
 
 TYPES:
 
----
 All with the following flags: hh, h, l, ll:
-%d/% - integer
-%o - octal
-%u - unsigned int
-%x/%X - hex
+- %d/i% - integer
+- %o - octal
+- %u - unsigned int
+- %x/%X - hex
 
 ---
 With flags: l, L:
