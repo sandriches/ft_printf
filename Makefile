@@ -37,9 +37,9 @@ $(NAME):
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
-# $(NAME):
-# 	make re -C libft/
-# 	gcc -Wall -Wextra -I./ $(SOURCES) main.c libft/libft.a
+test:
+ 	make re -C libft/
+ 	gcc -Wall -Wextra -I./ $(SOURCES) main.c libft/libft.a
 
 clean:
 	@make clean -C libft/
@@ -52,10 +52,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-
-poop:
-	@echo poop
-
-pee:
-	@echo pee
-	
