@@ -5,15 +5,19 @@ recoded printf function in C for Codam college assignment
 FT_PRINTF asks the student to recode the printf() function in C. This gives students an introduction to variadic arguments and code management, as several types must be implemented.
 
 TYPES:
+
+---
 All with the following flags: hh, h, l, ll:
 %d/% - integer
 %o - octal
 %u - unsigned int
 %x/%X - hex
+
 ---
 With flags: l, L:
 %f - float
 
+---
 %c			char
 %s			string
 %p			pointer
