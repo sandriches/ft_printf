@@ -24,6 +24,9 @@
 # define HEXSTRING			"1234567890ABCDEFabcdef"
 # define COLORSTRING		"rRgGyYbBmMcC"
 
+/*
+**	For COLOR implementation, use the macros following. Eg ft_printf("{red}This is red text!{/}");
+*/
 # define RED 				"\033[0;31m"
 # define OUR_RED			"{red}"
 # define BOLD_RED			"\033[1;31m"
